@@ -1,7 +1,30 @@
-body{
-    text-align:center
+@font-face{
+    font-family:"fff";
+    src:url("./fonts/DXMSubtitlesM-KSCpc-EUC-H.ttf") format("truetype");
 }
 
-.header {
-    text-align : center;
+.Chori {
+    background-image: url(./images/chori.jpg);
+    
+  }
+
+.dd {
+      text-align:right
+  }
+
+.tt{
+    font-family:fff;
+    text-align:center;
+    font-size:30px;
+    text-decoration:none;
+}
+
+.pp{
+    text-decoration:none;
+}
+
+.menu {
+    background-color: white;
+    height: 3.5rem;
+    width:500px;
 }
