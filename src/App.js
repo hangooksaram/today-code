@@ -7,9 +7,10 @@ import './App.css';
 
 import Home from "./Home";
 import About from "./About";
-import Edit from "./Edit";
+import AskBoard from "./pages/AskBoard";
+import DiscussBoard from "./pages/DiscussBoard";
+import HotIssueBoard from "./pages/HotIssueBoard";
 
-import './App.css';
 
 class Search extends Component { //검색창 Component
   state = {}
@@ -27,10 +28,10 @@ class Search extends Component { //검색창 Component
   }
   render(){
   return(
-  <form onSubmit={this.handleSubmit}>
+  <form className = "searchbar" onSubmit={this.handleSubmit}>
               <input placeholder="무엇을 검색하실" name="brdtitle" onChange={this.handleChange}/>
               <button type="done">검색</button>
-            </form>
+  </form>
     );
   }
 }
@@ -39,7 +40,7 @@ class App extends Component {
   constructor(props){
         super(props);
         this.state = {
-          title : "송현상 프로젝트"/*, subtitle : "webwebweb"*/
+          title : "재결합"/*, subtitle : "webwebweb"*/
           /*content:[
             {id:1, title : "222", content : "euaaaaaa"},
             {id:2, title : "aaa23", content : "aaaauuuuu"},
@@ -60,23 +61,40 @@ class App extends Component {
       <Search></Search>
       </div>
       <Router>
-      <div className = "tt">
+        <div className = "tt">
         <Link to="/">
-          <div className = "font">Home</div>
+          <button className = "btn1">Home</button> 
         </Link>
+        &nbsp;
         <Link to="/about">
-          About
+        <button className = "btn1">About</button>
         </Link>
-        <Link to="/edit">
-          글쓰기
-        </Link>
+        &nbsp;
       </div>
+      <div className = "vertical">
+      <br></br>
+      <Link to ="/ask">
+        <button className = "btn2">질문게이판</button>
+      </Link>
+      <br></br><br></br>
+      <Link to ="/discuss">
+        <button className = "btn2">투기장</button>
+      </Link>
+      <br></br><br></br>
+      <Link to = "/hotissue">
+        <button className = "btn2">핫게</button>
+      </Link>
+      </div>
+
       <hr />
+     
       <main> 
         <Switch>
           <Route exact path="/" component={Home} /> 
           <Route path="/about" component={About} />
-          <Route path="/edit" component={Edit} />
+          <Route path="/ask" component={AskBoard} />
+          <Route path="/discuss" component={DiscussBoard} />
+          <Route path="/hotissue" component={HotIssueBoard} />
         </Switch>
       </main>
     </Router>

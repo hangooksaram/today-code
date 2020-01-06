@@ -5,7 +5,10 @@
 
 .Chori {
     background-image: url(./images/chori.jpg);
-    
+  }
+
+.Jaguar {
+    background-image: url(./images/jaguar.jpg);
   }
 
 .dd {
@@ -15,7 +18,7 @@
 .tt{
     font-family:fff;
     text-align:center;
-    font-size:30px;
+    font-size:25px;
     text-decoration:none;
 }
 
@@ -28,3 +31,56 @@
     height: 3.5rem;
     width:500px;
 }
+
+.btn1 {
+    color : white;
+    background : black;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid teal;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+.btn2 {
+    color : white;
+    background : black;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid teal;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.vertical {
+    display:inline-block;
+    width:120px;
+    height:180px;
+    background:white;
+    text-align : center;
+    border: 10px solid powderblue;
+}
+
+ .rr {
+    text-align:right;
+    font-size:25px;
+    text-decoration:none;
+    margin-right : 220px;
+    margin-top : 150px;
+ }
+
+ .r {
+    text-align:center;
+    font-size:25px;
+    text-decoration:none;
+ }
+
+ .ll {
+    text-align:left;
+    font-size:25px;
+    text-decoration:none;
+ }
+
+ .wr {
+     border-width: 100px;
+ }
