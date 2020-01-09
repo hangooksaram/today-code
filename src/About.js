@@ -8,7 +8,7 @@ class About extends Component{
           <h1>우리의 사이트에 대하여</h1>
           <h2>각 분야의 개발자들이 자유롭게 생각을 공유합니다.</h2>
           <br></br>
-          <img src={chori} alt="Chori" />;
+          <img src={chori} alt="Chori" />
         </div>
         
             

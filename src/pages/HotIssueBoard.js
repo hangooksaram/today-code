@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import '../App.css';
 import Edit from '../Edit';
+import List from "../components/ListContentComponent";
 class HotIssueBoard extends Component{
     render() {
       return(
         <div>
           <div className = "r">
             <h1>핫이슈</h1>
-            <h2>요새 뜨거운 이슈</h2>  
+            <h2>요새 뜨거운 이슈</h2>
+            <List></List>  
           </div>
           <Router>
           <Switch>

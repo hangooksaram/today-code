@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import '../App.css';
 import Edit from '../Edit';
+import List from "../components/ListContentComponent";
 class AskBoard extends Component{
     render() {
       return(
@@ -9,6 +10,7 @@ class AskBoard extends Component{
           <div className = "r">
             <h1>질문하세요</h1>
             <h2>질문하는 질문게시판</h2>  
+            <List></List>
           </div>
           <Router>
           <Switch>
@@ -20,6 +22,7 @@ class AskBoard extends Component{
             </Link>
           </div>
           </Router>
+          
         </div>    
       );
     }
