@@ -7,6 +7,10 @@
     background-image: url(./images/chori.jpg);
   }
 
+.HomeHot1 {
+    background-image : url(./images/react.png);
+}
+
 .Jaguar {
     background-image: url(./images/jaguar.jpg);
   }
@@ -16,10 +20,9 @@
   }
 
 .tt{
-    font-family:fff;
-    text-align:center;
     font-size:25px;
     text-decoration:none;
+    text-align : center;
 }
 
 .pp{

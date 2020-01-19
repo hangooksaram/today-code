@@ -6,7 +6,7 @@ class ListContentComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            users: [],
+            boards: [],
             message: null
         }
         this.deleteContent = this.deleteContent.bind(this);
@@ -19,24 +19,24 @@ class ListContentComponent extends Component {
     }
 
     reloadContentList() {
-        ApiService.fetchUsers()
+        ApiService.fetchboards()
             .then((res) => {
-                this.setState({users: res.data.result})
+                this.setState({boards: res.data.result})
             });
     }
 
-    deleteContent(userId) {
-        ApiService.deleteContent(userId)
+    deleteContent(boardId) {
+        ApiService.deleteContent(boardId)
            .then(res => {
-               this.setState({message : 'User deleted successfully.'});
-               this.setState({users: this.state.users.filter(user => user.id !== userId)});
+               this.setState({message : 'board deleted successfully.'});
+               this.setState({boards: this.state.boards.filter(board => board.id !== boardId)});
            })
 
     }
 
     editContent(id) {
-        window.localStorage.setItem("userId", id);
-        this.props.history.push('/edit-user');
+        window.localStorage.setItem("boardId", id);
+        this.props.history.push('/edit-board');
     }
 
     render() {
@@ -52,14 +52,14 @@ class ListContentComponent extends Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.users.map(
-                        user =>
-                                    <tr key={user.id}>
-                                        <td>{user.title}</td>
-                                        <td>{user.content}</td>                                    
+                            this.state.boards.map(
+                        board =>
+                                    <tr key={board.id}>
+                                        <td>{board.title}</td>
+                                        <td>{board.content}</td>                                    
                                         <td>
-                                            <button className="btn btn-success" onClick={() => this.deleteContent(user.id)}> Delete</button>
-                                            <button className="btn btn-success" onClick={() => this.editContent(user.id)}> Edit</button>
+                                            <button className="btn btn-success" onClick={() => this.deleteContent(board.id)}> Delete</button>
+                                            <button className="btn btn-success" onClick={() => this.editContent(board.id)}> Edit</button>
                                         </td>
                                     </tr>
                             )

@@ -1,30 +1,32 @@
 import React, {Component} from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import '../App.js';
 import '../App.css';
 import Edit from '../Edit';
 import List from "../components/ListContentComponent";
-class DiscussBoard extends Component{
-    render() {
-      return(
-        <div>
-          <div className = "r">
-            <h1>투기장</h1>
-            <h2>서로토론하는방</h2>
-            <List></List>
-          </div>
-          <Router>
-          <Switch>
-          <Route path="/edit" component={Edit} />
-          </Switch>
-          <div className = "rr">
-            <Link to="/edit">
-              <button className = "btn1">글쓰기</button>
-            </Link>
-          </div>
-          </Router>
-        </div>    
-      );
-    }
-  }
+import Home from "../Home"; 
+function DiscussBoard ({match}){
+  alert('hello discussBoard');
+  return(
+    <div>
+      <div className = "r">
+      <h1>토론게시판</h1> 
+      </div>
+      <Router>
+        <Switch>
+          <Route exact path={match.path} component={List} />
+          <Route path={`${match.path}/:edit`} component={Edit} />
+          <Route path="/Home" component={Home} />
+        </Switch>
+        <div className = "rr">
+        <Link to={`${match.path}/:edit`}>
+            <button className = "btn1" >글쓰기</button>
+        </Link>
+        </div>
+      </Router>
+      
+    </div>    
+  );
+}
 
   export default DiscussBoard;

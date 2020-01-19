@@ -1,27 +1,28 @@
 import axios from 'axios';
-// axio import x?
-const USER_API_BASE_URL = 'http://localhost:3000/users';
+// axio 가 import가 안되서 안되는지 모르겠음
+const board_API_BASE_URL = 'http://localhost:3000/boards';
 
 class ApiService {
 
-    fetchUsers() {
-        return axios.get(USER_API_BASE_URL);
+    fetchboards() {
+        return axios.get(board_API_BASE_URL);
     }
 
-    fetchUserById(userId) {
-        return axios.get(USER_API_BASE_URL + '/' + userId); //userId -> url
+    fetchboardById(boardId) {
+        return axios.get(board_API_BASE_URL + '/' + boardId); //boardId -> url
+                                                            //
     }
 
-    deleteContent(userId) {
-        return axios.delete(USER_API_BASE_URL + '/' + userId);
+    deleteContent(boardId) {
+        return axios.delete(board_API_BASE_URL + '/' + boardId);
     }
 
-    addContent(user) {
-        return axios.post(""+USER_API_BASE_URL, user);
+    addContent(board) {
+        return axios.post(""+board_API_BASE_URL, board);
     }
 
-    editContent(user) {
-        return axios.put(USER_API_BASE_URL + '/' + user.id, user);
+    editContent(board) {
+        return axios.put(board_API_BASE_URL + '/' + board.id, board);
     }
 
 }
