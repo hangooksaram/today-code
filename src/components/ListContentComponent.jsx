@@ -66,7 +66,6 @@ class ListContentComponent extends Component {
                         }
                     </tbody>
                 </table>
-
             </div>
         );
     }

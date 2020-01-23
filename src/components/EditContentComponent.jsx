@@ -19,13 +19,13 @@ class EditContentComponent extends Component {
     }
 
     loadContent() {
-        ApiService.fetchUserById(window.localStorage.getItem("userId"))
+        ApiService.fetchboardById(window.localStorage.getItem("boardId"))
             .then((res) => {
-                let user = res.data.result;
+                let board = res.data.result;
                 this.setState({
-                id: user.id,
-                title: user.title,
-                content: user.content
+                id: board.id,
+                title: board.title,
+                content: board.content
                 })
             });
     }
@@ -35,35 +35,31 @@ class EditContentComponent extends Component {
 
     saveContent = (e) => {
         e.preventDefault();
-        let user = {id: this.state.id, title: this.state.title, content: this.state.content};
-        ApiService.editContent(user) //edit에서 설정한 user
+        let board = {id: this.state.id, title: this.state.title, content: this.state.content};
+        ApiService.editContent(board) //edit에서 설정한 board
             .then(response => {
-                this.setState({message : 'User added successfully.'});
-                this.props.history.push('/users');
+                this.setState({message : 'board added successfully.'});
+                this.props.history.push('/boards');
             });
     }
 
     render() {
         return (
             <div>
-                <h2 className="text-center">Edit User</h2>
+                <h2 className="text-center">Edit board</h2>
                 <form>
-
                     <div className="form-group">
-                        <label>User Name:</label>
+                        <label>board Name:</label>
                         <input type="text" placeholder="id" name="id" className="form-control" readonly="true" defaultValue={this.state.id}/>
                     </div>
-
                     <div className="form-group">
                         <label>Title:</label>
                         <input placeholder="Title" name="title" className="form-control" value={this.state.title} onChange={this.onChange}/>
                     </div>
-
                     <div className="form-group">
                         <label>Content:</label>
                         <input placeholder="Content" name="content" className="form-control" value={this.state.content} onChange={this.onChange}/>
                     </div>
-
                     <button className="btn btn-success" onClick={this.saveContent}>Save</button>
                 </form>
             </div>

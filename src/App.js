@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import Subject from "./components/Subject";
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './App.css';
 import jaguar from "./images/jaguar.jpg";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -9,12 +8,13 @@ import {Button, Nav,Navbar,FormControl, NavItem, Col,  Form, FormGroup, Label, I
 //Link -> a href 태그와 같다고 보면됨
 //Router는 Link와 Route를 묶어준다고 보면 됨
 
-import Home from "./Home";
-import About from "./About";
-import AskBoard from "./pages/AskBoard";
-import DiscussBoard from "./pages/DiscussBoard";
-import HotIssueBoard from "./pages/HotIssueBoard";
-import Edit from "./Edit";
+import Home from "./components/pages/Home";
+import About from "./components/pages/AboutBoard";
+import AskBoard from "./components/pages/AskBoard";
+import DiscussBoard from "./components/pages/DiscussBoard";
+import HotIssueBoard from "./components/pages/HotIssueBoard";
+import EditBoard from "./components/pages/EditBoard";
+
 
 class Search extends Component { //검색창 Component
   state = {}
@@ -44,22 +44,10 @@ class Search extends Component { //검색창 Component
       </Subject>
 */
 class App extends Component {
-  constructor(props){
-        super(props);
-        this.state = {
-          title : "재결합"/*, subtitle : "webwebweb"*/
-          /*content:[
-            {id:1, title : "222", content : "euaaaaaa"},
-            {id:2, title : "aaa23", content : "aaaauuuuu"},
-            {id:3, title : "66666", content : "uuuuuuuuuuuuuuu"}
-          ]*/
-        }
-    }
     componentDidMount() {
       console.log(this.context);
    }
   render(){
-    console.log(this.state.content);
     return (
     <div>
       <div className = "tt">
@@ -89,6 +77,7 @@ class App extends Component {
           <Route path="/ask" component={AskBoard} />
           <Route path="/discuss" component={DiscussBoard} />
           <Route path="/hotissue" component={HotIssueBoard} />
+          <Route path="/edit" component={EditBoard} />
         </Switch>
       </main>
     </Router>

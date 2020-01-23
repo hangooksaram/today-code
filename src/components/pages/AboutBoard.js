@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import chori from './images/chori.jpg'; 
-import './App.css';
+import chori from '../../images/chori.jpg'; 
+import '../../App.css';
 class About extends Component{
     render() {
       return(

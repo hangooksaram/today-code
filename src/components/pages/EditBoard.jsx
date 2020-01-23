@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ApiService from "./service/ApiService";
+import ApiService from "../../service/ApiService";
 import 'bootstrap/dist/css/bootstrap.css';
-import './pages/DiscussBoard.js';
+import './DiscussBoard';
 import { FormGroup,Form,Col, Label } from 'reactstrap';
 //ID, Title, Content
 
@@ -36,7 +36,6 @@ class AddContentComponent extends Component{
         this.setState({ [e.target.name]: e.target.value });
 
     render() {
-        alert("helloedit");
         return(
             <div>
                 <Form>
