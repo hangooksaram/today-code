@@ -4,6 +4,7 @@ import {Redirect} from "react-router-dom";
 import '../../App.css';
 import Edit from '../../components/pages/EditBoard';
 import List from "../../components/ListContentComponent";
+import MenuBar from "../../components/pages/MenuBar";
 const AskBoard = ({ history, match }) => {
   return (
       <div className="r">
@@ -18,6 +19,7 @@ const AskBoard = ({ history, match }) => {
                   글쓰기
           </button>
           </div>
+          
       </div>
   );
 };

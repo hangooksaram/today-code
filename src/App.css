@@ -11,9 +11,21 @@
     background-image : url(./images/react.png);
 }
 
+.BlockChain {
+    background-image : url(./images/BlockChain.jpg); 
+}
+
+.SpringBoot {
+    background-image : url(./images/SpringBoot.png);
+}
+
 .Jaguar {
     background-image: url(./images/jaguar.jpg);
   }
+
+.Background {
+    background-image: url(./images/LoginHome.jpg);
+}
 
 .dd {
       text-align:right
@@ -68,8 +80,7 @@
     text-align:right;
     font-size:25px;
     text-decoration:none;
-    margin-right : 220px;
-    margin-top : 150px;
+    margin-right : 30px;
  }
 
  .r {
@@ -78,10 +89,11 @@
     text-decoration:none;
  }
 
- .ll {
-    text-align:left;
- }
-
- .wr {
-     border-width: 100px;
- }
+ .bg {
+    background-image: url(./images/LoginHome.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    opacity: 0.5; 
+}

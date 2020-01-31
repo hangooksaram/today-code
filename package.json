@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "file:node_modules/@material-ui/styles",
     "axios": "^0.19.1",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
@@ -12,7 +15,9 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
-    "reactstrap": "^8.2.0"
+    "reactjs-popup": "^1.5.0",
+    "reactstrap": "^8.2.0",
+    "styled-components": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

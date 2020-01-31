@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import react from '../../images/react.png'; 
+import react from '../../images/react.jpeg'; 
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { NavLink} from "react-router-dom";
-import HotIssueBoard from "../../components/pages/HotIssueBoard";
 import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,7 +13,7 @@ const Home = ({ history}) =>{
       </div>
       <div className = "ll">
       <NavLink to = "/hotissue">
-        <img onClick={() => { history.push('/hotissue') }} src = {react}></img>
+        <div className = "tt"><img onClick={() => { history.push('/hotissue') }} src = {react}></img></div>
       </NavLink>
     </div>
     </div>
