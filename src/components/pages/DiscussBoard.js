@@ -4,6 +4,7 @@ import '../../App.css';
 import Edit from '../../components/pages/EditBoard';
 import List from "../../components/ListContentComponent";
 import Home from "../../components/pages/Home"; 
+import MenuBar from "../pages/MenuBar";
 const DiscussBoard = ({ history, match }) => {
   return (
       <div className="r">

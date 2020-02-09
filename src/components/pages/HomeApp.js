@@ -120,7 +120,7 @@ const HomeApp = ({ history, match}) =>{
       </AppBar>
 
       <Switch style = {margin}>
-          <Route path ="/HomeApp" component = {Home} />
+          <Route exact path ="/HomeApp" component = {Home} />
           <Route path="/about" component={About} />
           <Route path="/ask" component={AskBoard} />
           <Route path="/discuss" component={DiscussBoard} />

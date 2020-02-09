@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './components/pages/HomeApp';
-import Popup from "reactjs-popup";
 import LoginHome from "./components/pages/LoginHome";
 import HomeApp from "./components/pages/HomeApp";
 import Home from "./components/pages/Home";
@@ -14,12 +13,15 @@ import AskBoard from "./components/pages/AskBoard";
 import About from "./components/pages/AboutBoard";
 import HotIssueBoard from "./components/pages/HotIssueBoard";
 import MenuBar from "./components/pages/MenuBar";
-const App = ({ match }) => {
+import queryString from 'query-string';
+class App extends Component {
+  render(){
     return (
       <div> 
         <Router>
           <Switch>
             <Route exact path="/" component={LoginHome} />
+            {<MenuBar/>}
             <Route path="/HomeApp" component={HomeApp} />
             <Route path="/Home" component={Home} />
             <Route path="/discuss" component={DiscussBoard} />
@@ -30,6 +32,7 @@ const App = ({ match }) => {
         </Router>
         </div>
     );
+  }
 }
 
 export default App;

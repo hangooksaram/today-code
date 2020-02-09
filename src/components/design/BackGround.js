@@ -7,7 +7,7 @@ body{
 width:100%;
 height:100vh;
 display:flex;
-background: url(https://p4.wallpaperbetter.com/wallpaper/628/289/160/transport-rails-san-francisco-tram-wallpaper-preview.jpg);
+background: url(https://image.freepik.com/free-photo/night-sky-with-stars-moon_93200-29.jpg);
 background-size:cover;
 align-items:center;
 margin-left: 33%;
