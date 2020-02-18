@@ -31,7 +31,6 @@ class ListContentComponent extends Component {
                this.setState({message : 'board deleted successfully.'});
                this.setState({boards: this.state.boards.filter(board => board.id !== boardId)});
            })
-
     }
 
     editContent(id) {

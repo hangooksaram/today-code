@@ -80,9 +80,9 @@ const LoginHome = ({ history }) =>  {
         {/*<img src = {Background} alt= "Background"></img>*/}
         <BackGround/>
         <LoginPaper>
-            </LoginPaper>
+        </LoginPaper>
             <div className = "rr">
-                <Button variant = "contained"  onClick={() => { history.push('/HomeApp') }}> 그냥 볼래유 ㅡㅜ</Button>
+                <Button variant = "contained"  onClick={() => { history.push('/Home') }}> 그냥 볼래유 ㅡㅜ</Button>
 
             </div>
         </div>

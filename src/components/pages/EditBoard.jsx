@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ApiService from "../../service/ApiService";
 import 'bootstrap/dist/css/bootstrap.css';
-import './DiscussBoard';
 import { FormGroup,Form,Col, Label } from 'reactstrap';
 //ID, Title, Content
 

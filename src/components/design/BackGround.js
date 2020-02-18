@@ -4,13 +4,13 @@ import '../../App.css';
 import BG from "../../images/LoginHome.jpg";
 const BackGround = createGlobalStyle `
 body{
-width:100%;
-height:100vh;
+width:900px;
+height:650px;
 display:flex;
-background: url(https://image.freepik.com/free-photo/night-sky-with-stars-moon_93200-29.jpg);
+background: url(https://static.etoffe.com/inter/140950/papier-peint-bohemian-texture-mulberry.jpg);
 background-size:cover;
 align-items:center;
-margin-left: 33%;
+margin-left: 18%;
 }
 `
 

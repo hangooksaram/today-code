@@ -1,13 +1,56 @@
 @font-face{
-    font-family:"fff";
-    src:url("./fonts/DXMSubtitlesM-KSCpc-EUC-H.ttf") format("truetype");
+    font-family:'fff';
+    src:url('fonts/Windy Lavender.ttf') format('truetype');
 }
 
+@font-face{ font-family:'NanumGothic'; 
+    src:url('fonts/NanumGothic.eot'); 
+    src:url('fonts/NanumGothic.eot?#iefix') format(‘embedded-opentype’), 
+    url('fonts/NanumGothic.woff') format(‘woff’);
+}
+
+@font-face{
+    font-family : 'First';
+    src:url('fonts/junegull.ttf') format('truetype');
+}
+
+@font-face{
+
+ font-family : 'Second';
+    src:url('fonts/BMJUA_ttf.ttf') format('truetype');
+}
+
+.nn {
+    font-family:NanumGothic;
+    font-style : normal;
+    font-weight: normal;
+    font-size : 400;
+}
+
+.fontstyle {
+    font-family : fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size : 100px;
+}
+
+.firstfont {
+    font-family : First;
+    font-style: normal;
+    font-weight: normal;
+    font-size : 100px;
+}
+.secondfont {
+    font-family : Second;
+    font-style: normal;
+    font-weight: normal;
+    font-size : 26px;
+}
 .Chori {
     background-image: url(./images/chori.jpg);
   }
 
-.HomeHot1 {
+.HomeHot1 { 
     background-image : url(./images/react.png);
 }
 
@@ -36,6 +79,7 @@
     text-decoration:none;
     text-align : center;
 }
+
 
 .pp{
     text-decoration:none;
