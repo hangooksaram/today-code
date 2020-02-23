@@ -9,8 +9,23 @@ import Divider from '@material-ui/core/Divider';
 import Avartar from '@material-ui/core/Divider';
 import Heart from '@material-ui/icons/FavoriteBorder';
 import HeartAdapted from '@material-ui/icons/Favorite';
-import PostForm from '../design/PostForm'
+import UserPost from '../pages/UserPost'
+const userpost = [
+    {
+        name : '오현재',
+        content : 'ddddddddddddddddddddddddddddddddddddddddddddddddddddd'
+    },
 
+    {
+        name : '송인철',
+        content : 'ssssssssssssssssssssssssssssssssssssssssssssss'
+    },
+
+    {
+        name : '백재상',
+        content : 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+    }
+]
 const useStyles = makeStyles(muiBaseTheme => ({
       card:{
         borderColor: 'grey',
@@ -50,15 +65,13 @@ const useStyles = makeStyles(muiBaseTheme => ({
   }))
   
 
-const Recent = () => {
+const PostForm = () => {
         const classes = useStyles()
         return(
         <div>
-            <h2 style = {{marginLeft :'320px'}}>최근 포스트</h2>
-            <PostForm/>
         </div>
         );
     }
 
 
-export default Recent;
+export default PostForm;

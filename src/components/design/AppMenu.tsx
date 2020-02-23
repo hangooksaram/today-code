@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-
 import List from '@material-ui/core/List';
-
 import Recent from '@material-ui/icons/FlashOn';
 import Like from '@material-ui/icons/Favorite';
 import Home from '@material-ui/icons/Home';
-import IconPeople from '@material-ui/icons/People';
-import IconBarChart from '@material-ui/icons/BarChart';
+import Person from '@material-ui/icons/Person'
 import IconLibraryBooks from '@material-ui/icons/LibraryBooks';
 
 import AppMenuItem from '../design/AppMenuItem';
@@ -29,25 +26,10 @@ const appMenuItems = [
     Icon: Like,
   },
   {
-    name: 'Nested Pages',
-    Icon: IconLibraryBooks,
-    items: [
-      {
-        name: 'Level 2',
-      },
-      {
-        name: 'Level 2',
-        items: [
-          {
-            name: 'Level 3',
-          },
-          {
-            name: 'Level 3',
-          },
-        ],
-      },
-    ],
-  },
+    name : 'MyPage',
+    link: '/MyPage',
+    Icon : Person,
+  }
 ]
 
 const AppMenu: React.FC = () => {
@@ -62,7 +44,7 @@ const AppMenu: React.FC = () => {
   )
 }
 
-const drawerWidth = 240
+const drawerWidth = 100
 
 const useStyles = makeStyles(theme =>
   createStyles({
