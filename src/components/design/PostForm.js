@@ -16,7 +16,7 @@ const userpost = [
         content : 'ddddddddddddddddddddddddddddddddddddddddddddddddddddd'
     },
 
-    {
+    {   
         name : '송인철',
         content : 'ssssssssssssssssssssssssssssssssssssssssssssss'
     },
@@ -24,7 +24,12 @@ const userpost = [
     {
         name : '백재상',
         content : 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-    }
+    },
+    {
+        name : '백재상',
+        content : 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+    },
+    
 ]
 const useStyles = makeStyles(muiBaseTheme => ({
       card:{
@@ -67,9 +72,39 @@ const useStyles = makeStyles(muiBaseTheme => ({
 
 const PostForm = () => {
         const classes = useStyles()
+        let cardList = []
+        Object.keys(userpost).forEach((name) => {
+            let u = userpost[name]
+            cardList.push (
+                <div className = {classes.card}>
+                <Grid container  spacing = {4} direction = 'column'>
+                <Grid item  xs = {6}>
+                <ExpansionPanel className={classes.panel}>
+                <Card>
+            <CardMedia className = {classes.head}> 
+               {u.name}
+            </CardMedia>
+            <Divider className = {classes.divider}></Divider>
+            <CardContent className = {classes.content}>
+                {u.content}
+            </CardContent>
+            <Divider className = {classes.divider}></Divider>
+            <div className = {classes.bottom}>
+                <Heart></Heart>
+            </div>
+        </Card>
+        </ExpansionPanel>
+        </Grid>
+            </Grid>
+            </div>
+            )
+        })
         return(
-        <div>
-        </div>
+            <div>
+                    {cardList}
+                    {/*<Paper className = {classes.paper}><div style = {{textOverflow:'ellipsis'}}>dddddddddddddddddd</div></Paper>*/}
+                
+            </div>
         );
     }
 
