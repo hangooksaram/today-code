@@ -14,21 +14,7 @@ const userpost = [
     {
         name : '오현재',
         content : 'ddddddddddddddddddddddddddddddddddddddddddddddddddddd'
-    },
-
-    {   
-        name : '송인철',
-        content : 'ssssssssssssssssssssssssssssssssssssssssssssss'
-    },
-
-    {
-        name : '백재상',
-        content : 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-    },
-    {
-        name : '백재상',
-        content : 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-    },
+    }
     
 ]
 const useStyles = makeStyles(muiBaseTheme => ({
