@@ -6,10 +6,10 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from '@material-ui/core/Divider';
-import Avartar from '@material-ui/core/Divider';
 import Heart from '@material-ui/icons/FavoriteBorder';
-import HeartAdapted from '@material-ui/icons/Favorite';
-import UserPost from '../pages/UserPost'
+
+import {getContentBags} from '../../contentStore/contentBag'
+
 const userpost = [
     {
         name : '오현재',

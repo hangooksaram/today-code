@@ -1,11 +1,6 @@
 import React, {Component} from "react";
-import Background from '../../images/LoginHome.jpg'; 
-import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import { NavLink} from "react-router-dom";
 import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import LoginPaper from '../design/LoginPaper';
 import BackGround from '../design/BackGround';
 import Button from '@material-ui/core/Button';
@@ -14,8 +9,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import TextField from '@material-ui/core/TextField';
-import {withStyles} from '@material-ui/core/styles';
-import '../../App.css';
 
 const styles  = theme => ({
     hidden: {

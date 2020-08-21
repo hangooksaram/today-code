@@ -1,15 +1,7 @@
 import React, {Component} from "react";
-import Grid from '@material-ui/core/Grid';
 import {makeStyles}  from '@material-ui/core/styles';
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Divider from '@material-ui/core/Divider';
-import Avartar from '@material-ui/core/Divider';
-import Heart from '@material-ui/icons/FavoriteBorder';
-import HeartAdapted from '@material-ui/icons/Favorite';
 import PostForm from '../design/PostForm'
+import ContentList from '../pages/ContentList'
 
 const useStyles = makeStyles(muiBaseTheme => ({
       card:{
