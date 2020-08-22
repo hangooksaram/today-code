@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import './App.css';
 import App from './App'; // ./App 은 App.js를 뜻하는 것
 import * as serviceWorker from './serviceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));

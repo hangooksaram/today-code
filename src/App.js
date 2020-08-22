@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import LoginHome from "./components/pages/LoginHome";
 import Like from "./components/pages/Like";

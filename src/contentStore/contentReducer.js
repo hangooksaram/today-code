@@ -1,9 +1,9 @@
-import {combineReducers} from 'react-redux'
+import {combineReducers} from 'redux'
 import {ADD_CONTENTBAG, CONTENTBAG_AVAILABLE} from '../contentStore/contentBag'
 
 contentdataState = {contentBags : []};
 
-const contentReducer = (state = contentdataState, action) => {
+const contentReducer = (state = contentdataState, action) => { //리듀서
     switch (action.type){
         case ADD_CONTENTBAG :
             let {contentBag} = action.data;
