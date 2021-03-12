@@ -1,23 +1,23 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
-interface CodeState {
-    code : string,
-    type : string,
+export interface CodeState {
+  code: string;
+  type: string;
 }
 
-const defaultState = {
-    code : '',
-    type : ''
-}
+const defaultState: CodeState = {
+  code: "",
+  type: "",
+};
 
-const inputState = atom<CodeState>({
-    key : "inputState",
-    default : defaultState
-})
+const inputState = atom({
+  key: "inputState",
+  default: defaultState,
+});
 
 const codeState = atom<CodeState[]>({
-    key : 'codeState',
-    default : [defaultState]
-})
+  key: "codeState",
+  default: [defaultState],
+});
 
-export {codeState, inputState};
+export { codeState, inputState };

@@ -1,8 +1,7 @@
-import { selector } from 'recoil';
+import { selector } from "recoil";
 
 const codeSelector = selector({
-    key : 'codeSelector',
-    get : ({get}) => {
-        
-    }
-})
+  key: "codeSelector",
+  get: ({ get }) => {},
+  set: ({ set }) => {},
+});

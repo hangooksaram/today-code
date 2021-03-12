@@ -1,8 +1,10 @@
 import { atom } from "recoil";
 
-const darkmodeState = atom({
-    key : 'darkmodeState',
-    default : "Turn Off" ,
-})
+const defaultState: string = "Turn Off";
 
-export {darkmodeState};
+const darkmodeState = atom({
+  key: "darkmodeState",
+  default: defaultState,
+});
+
+export { darkmodeState };

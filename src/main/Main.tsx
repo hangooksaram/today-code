@@ -1,27 +1,38 @@
-import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { darkmodeSelector } from "../store/darkmode/selectors/darkmodeSelector";
-import { ListContainer, MainContainer } from "../style/container";
+import React, { useEffect, useState } from "react";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  ListContainer,
+  MainContainer,
+  HeaderContainer,
+} from "../style/container";
 import "../style/global.css";
-import DarkModeToggle from './../darkmode/DarkModeToggle';
+import DarkModeToggle from "../utils/DarkModeToggle";
 import Input from "./Input";
-import SideBar from './SideBar';
-import CodeList from './CodeList';
+import CodeList from "./CodeList";
 import { sidebarState } from "../store/sidebar/atoms/sidebarState";
-import {SideBarButton} from '../style/buttons';
-import sidebarSelector from './../store/sidebar/selectors/sidebarSelector';
-const Main = () => {  
-  const isDark = useRecoilValue(darkmodeSelector);
-  const isOpen = useRecoilValue(sidebarSelector);
-  const [open, setOpen] = useRecoilState(sidebarState);  
+import { SideBarButton } from "../style/buttons";
+import { darkmodeState } from "../store/darkmode/atoms/darkmodeState";
+
+const Main = () => {
+  const darkMode = useRecoilValue(darkmodeState);
+  const [open, setOpen] = useRecoilState(sidebarState);
+  useEffect(() => {
+    setOpen("default");
+  }, []);
   return (
-    <div className={isDark === "Turn On" ? "dark" : "not-dark"}>
-      <DarkModeToggle/>      
-      <SideBarButton onClick={()=>setOpen(isOpen? false : true)}>{isOpen ? "닫기" : "열기"}</SideBarButton>
+    <div className={darkMode === "Turn On" ? "dark" : "not-dark"}>
+      <HeaderContainer>
+        <SideBarButton
+          onClick={() => setOpen(open === "opened" ? "closed" : "opened")}
+        >
+          메뉴
+        </SideBarButton>
+        <DarkModeToggle />
+      </HeaderContainer>
       <MainContainer>
-        <SideBar/>
-        <CodeList/>        
-      </MainContainer>      
+        <Input />
+        <CodeList />
+      </MainContainer>
     </div>
   );
 };

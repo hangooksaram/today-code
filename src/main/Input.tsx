@@ -1,32 +1,45 @@
 import React from "react";
 import MainInput from "./../style/inputs";
-import { useRecoilValue } from "recoil";
-import { darkmodeSelector } from "../store/darkmode/selectors/darkmodeSelector";
+import { InputContainer } from "./../style/container";
+import { useRecoilValue, useRecoilState, useSetRecoilState } from "recoil";
 import { codeState, inputState } from "../store/codes/atoms/codeState";
-import { useRecoilState } from "recoil";
+import { darkmodeState } from "../store/darkmode/atoms/darkmodeState";
+import { CodeState } from "./../store/codes/atoms/codeState";
 
 const Input = () => {
-  const isDark = useRecoilValue(darkmodeSelector);
-  const [codes, setCodes] = useRecoilState(codeState);
+  const darkMode = useRecoilValue(darkmodeState);
+  const setCodes = useSetRecoilState(codeState);
   const [input, setInput] = useRecoilState(inputState);
   const { code, type } = input;
-  const handleChange = (e) => {
+  const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setInput({ ...input, type: e.target.value });
+  };
+  const handleCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput({ ...input, code: e.target.value });
   };
-  const handleSubmit = () =>{
-    setCodes(codes => codes.concat(input));
-  } 
+
+  const handleClick = () => {
+    setCodes((codes) => [...codes, input]);
+    setInput({ code: "", type: "" });
+  };
+
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <MainInput value={code} onChange={handleChange} isDark={isDark} />
-        <input
-          value={type}
-          onChange={(e) => setInput({ ...input, type: e.target.value })}
-        />
-        <button type="submit">확인</button>
-      </form>
-    </>
+    <InputContainer style={{ height: "25%" }}>
+      <select
+        onChange={handleTypeChange}
+        value={type}
+        name="types"
+        id="type-select"
+      >
+        <option value="node.js">node.js</option>
+        <option value="React.js">React.js</option>
+        <option value="Java">Java</option>
+      </select>
+      <MainInput value={code} onChange={handleCodeChange} isDark={darkMode} />
+      <button onClick={handleClick} type="submit">
+        확인
+      </button>
+    </InputContainer>
   );
 };
 

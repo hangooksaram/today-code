@@ -1,11 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const DarkModeButton = styled.button`
-    color : red;
-`
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: white;
+`;
 const SideBarButton = styled.button`
-    background-color : pink;
-    border-radius : 50%;
-`
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: white;
+  margin-right: 1%;
+`;
 
-export {DarkModeButton, SideBarButton}
+export { DarkModeButton, SideBarButton };

@@ -1,8 +1,10 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
-const sidebarState= atom({
-    key : 'sidebar',
-    default : false,
-})
+const defaultState: string = "default";
 
-export {sidebarState};
+const sidebarState = atom({
+  key: "sidebar",
+  default: defaultState,
+});
+
+export { sidebarState };

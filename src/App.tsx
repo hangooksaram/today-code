@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
+import Main from "./main/Main";
+import SideBar from "./main/SideBar";
 
-import Main from './main/Main';
-
-const App = () => {    
-    return(
-        <RecoilRoot>                               
-            <Main/>
-        </RecoilRoot>
-    )  
+const App = () => {
+  return (
+    <RecoilRoot>
+      <SideBar />
+      <Main />
+    </RecoilRoot>
+  );
 };
 
 export default App;
